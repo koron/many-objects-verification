@@ -87,25 +87,25 @@ public class ManyObjects
         System.gc();
         StopWatch.end();
 
-        StopWatch.begin("list to array conversion #" + n);
+        StopWatch.begin("list to binpack array conversion #" + n);
         currArray = newArray(currList);
         StopWatch.end();
-        StopWatch.begin("list to array after GC #" + n);
+        StopWatch.begin("list to binpack array after GC #" + n);
         currList = null;
         System.gc();
         StopWatch.end();
 
-        StopWatch.begin("array to array conversion #" + n);
+        StopWatch.begin("binpack array to binpack array conversion #" + n);
         currArray = newArray(currArray);
         StopWatch.end();
-        StopWatch.begin("array to array after GC #" + n);
+        StopWatch.begin("binpack array to binpack array after GC #" + n);
         System.gc();
         StopWatch.end();
 
-        StopWatch.begin("array to list conversion #" + n);
+        StopWatch.begin("binpack array to list conversion #" + n);
         currList = newList(currArray);
         StopWatch.end();
-        StopWatch.begin("array to list after GC #" + n);
+        StopWatch.begin("binpack array to list after GC #" + n);
         currArray = null;
         System.gc();
         StopWatch.end();
