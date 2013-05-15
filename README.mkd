@@ -36,6 +36,14 @@ BtoL GC |3.0203 |3.0735 |2.9801 |2.7467 |2.6612
 *   XtoY GC: GC after converted X to Y
 
 
-## Consider
+## Consideration
 
-TODO:
+List is holding many objects.  Binpack array is holding very few.
+
+GC with holding a list is slower than GC with holding a binpack array.
+
+Comparing between LtoB and LtoL shows cost of construtor of binary packing.
+
+Comparing between BtoB and LtoB shows cost of get() method of binary packing.
+
+BtoL an LtoL shows const of get() too.

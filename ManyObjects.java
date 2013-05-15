@@ -125,7 +125,7 @@ public class ManyObjects
 
         //prompt("Waiting to start");
 
-        for (int i = 1; i <= 5; ++i) {
+        for (int i = 1; i <= 10; ++i) {
             System.out.println("");
             trial(i);
         }
